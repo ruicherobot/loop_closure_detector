@@ -1,0 +1,6 @@
+<launch>
+  <node name="store_images" pkg="loop_closure_detector" type="store_images_node" output="screen" required="true">  
+    <!-- <param name="XXX" value="/XXX"/> -->
+    
+  </node>
+</launch>

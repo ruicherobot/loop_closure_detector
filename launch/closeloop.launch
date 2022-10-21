@@ -1,0 +1,16 @@
+<launch>
+  <node name="closeloop" pkg="loop_closure_detector" type="closeloop_node" output="screen" required="true">
+    <!-- <param name="XXX" value="/XXX"/> -->
+    <param name="vocab_initial_path" value="$(find loop_closure_detector)/data/initial.yml.gz" />
+    <param name="vocab_smaller_path" value="$(find loop_closure_detector)/data/vocab_cassie_smaller.yml.gz" />
+    <param name="vocab_larger_path_" value="$(find loop_closure_detector)/vocab_cassie_larger.yml.gz" />
+    <param name="txt_vertexes_path" value="$(find loop_closure_detector)/data/vertex_se3_quat.txt" />
+    <param name="txt_edges_path" value="$(find loop_closure_detector)/data/edge_se3_quat.txt" />
+    <param name="g2o_path" value="$(find loop_closure_detector)/data/combine.g2o" />
+    <param name="pcd_path" value="$(find loop_closure_detector)/pcd_files/" />
+    <param name="max_range" value="8.0" />
+    <param name="height_threshold" value="0.5" />
+    <param name="view_direction" value="0.0" />
+    <param name="view_angle" value="240.0" />
+  </node>
+</launch>
